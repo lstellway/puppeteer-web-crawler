@@ -1,0 +1,36 @@
+{
+    "sitemap": [],
+    "seed": [],
+    "gap": 200,
+    "headless": true,
+    "robots": true,
+    "loadOptions": {
+        "waitUntil": ["load", "domcontentloaded", "networkidle0", "networkidle2"]
+    },
+    "protocol": {
+        "invalid": [
+            "tel",
+            "mailto",
+            "ftp",
+            "arp",
+            "dhcp",
+            "dns",
+            "dsn",
+            "imap",
+            "icmp",
+            "idrp",
+            "ip",
+            "irc",
+            "pop3",
+            "par",
+            "rlogin",
+            "smtp",
+            "ssl",
+            "ssh",
+            "tcp",
+            "telnet",
+            "upd",
+            "ups"
+        ]
+    }
+}
