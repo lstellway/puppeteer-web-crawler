@@ -4,8 +4,7 @@
   "description": "Web scraper utilizing Headless Chrome via Puppeteer",
   "main": "index.js",
   "scripts": {
-    "scrape": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "crawl": "node index.js"
   },
   "keywords": [
     "headless",
