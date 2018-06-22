@@ -32,10 +32,14 @@ const scope = {
         // Validate string
         if (url && url.constructor == String) {
             url = URL.parse(url);
-            // Look for invalid protocol
+
+            // Validate protocol
             if (config.main.protocol.invalid.indexOf((url.protocol || '').split(':')[0].toLowerCase()) < 0) {
-                // Validate host
-                return (url.hostname && scope.hostname) ? scope.hostname == url.hostname : true;
+                // Validate file type
+                if (url.pathname && config.files.invalid.indexOf(url.pathname.split('.').pop().toLowerCase()) < 0) {
+                    // Validate host
+                    return (url.hostname && scope.hostname) ? scope.hostname == url.hostname : true;
+                }
             }
         }
         return false;
